@@ -18,6 +18,7 @@ This repository provide a script to download Thai Wikipedia dump (`pages-article
 
     <details>
     <summary>Example output:</summary>
+    
     ```
     Download thwiki-20201120-pages-articles.xml.bz2
     % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
@@ -50,7 +51,7 @@ This repository provide a script to download Thai Wikipedia dump (`pages-article
     2. OUTPUT_DIR - Directory to store the extracted data
 
     3. LOG_PATH - Path to store the logging from wikiextractor
-    
+
     4. PARAMS - Additina parameters that will be passed to `wikiextractor` (e.g. `--sections --json`) (See more detail from this page: https://github.com/attardi/wikiextractor)
 
     <br>
