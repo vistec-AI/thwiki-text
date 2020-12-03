@@ -18,7 +18,7 @@ This repository provide a script to download Thai Wikipedia dump (`pages-article
 
     <details>
     <summary>Example output:</summary>
-    
+
     ```
     Download thwiki-20201120-pages-articles.xml.bz2
     % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
@@ -58,6 +58,7 @@ This repository provide a script to download Thai Wikipedia dump (`pages-article
 
     <details>
     <summary>Example output:</summary>
+
     ```
     Begin extracting thwiki dump from ../dumps/thwiki-20201120-pages-articles.xml.bz2
     INFO: Loaded 0 templates in 0.0s
