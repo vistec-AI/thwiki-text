@@ -90,7 +90,7 @@ This repository provide a script to download Thai Wikipedia dump (`pages-article
 
 python ./scripts/convert_to_wikitext_format.py \
     ./data/extracted/thwiki-20201120_no-list \
-    ./data/wikitext_format/thwiki-20201120_no-list.txt \
+    ./data/wikitext_format/thwiki-20201120_no-list_rm-empty-parenthesis.txt \
     --rm_empty_parenthesis
 
 ```
@@ -109,7 +109,7 @@ Done.
 Time taken: 34.669601 secs.
 
 
-Writing the result to ./data/wikitext_format/thwiki-20201120_no-list.txt
+Writing the result to ./data/wikitext_format/thwiki-20201120_no-list_rm-empty-parenthesis.txt
 
 ```
 </details>
