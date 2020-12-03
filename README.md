@@ -30,6 +30,8 @@ This repository provide a script to download Thai Wikipedia dump (`pages-article
     
     where `20201120` is the version of Thai Wikipedia dump (see more detail from [dumps.wikimedia.org/thwiki](https://dumps.wikimedia.org/thwiki/))
 
+<br>
+
 2. Extract texts from downloaded dump (.bz2) with `wikiextractor` via the following scripts (`./scripts/extract_thwiki_dump.sh`)
 
     ```
@@ -44,10 +46,14 @@ This repository provide a script to download Thai Wikipedia dump (`pages-article
     where the arguments are as follows:
 
     1. DUMP_FILE_PATH - The path to the Wikipedia dump (.bz2)
+
     2. OUTPUT_DIR - Directory to store the extracted data
+
     3. LOG_PATH - Path to store the logging from wikiextractor
+    
     4. PARAMS - Additina parameters that will be passed to `wikiextractor` (e.g. `--sections --json`) (See more detail from this page: https://github.com/attardi/wikiextractor)
 
+    <br>
 
     <details>
     <summary>Example output:</summary>
@@ -83,33 +89,33 @@ This repository provide a script to download Thai Wikipedia dump (`pages-article
     ```
     </details>
 
+<br>
 
-2. Perform text cleaning and convert into WikiText format via the following script (`./scripts/convert_to_wikitext_format.py`)
+3. Perform text cleaning and convert into WikiText format via the following script (`./scripts/convert_to_wikitext_format.py`)
 
-```bash
+    ```bash
+    python ./scripts/convert_to_wikitext_format.py \
+        ./data/extracted/thwiki-20201120_no-list \
+        ./data/wikitext_format/thwiki-20201120_no-list_rm-empty-parenthesis.txt \
+        --rm_empty_parenthesis
 
-python ./scripts/convert_to_wikitext_format.py \
-    ./data/extracted/thwiki-20201120_no-list \
-    ./data/wikitext_format/thwiki-20201120_no-list_rm-empty-parenthesis.txt \
-    --rm_empty_parenthesis
+    ```
+    <details>
+    <summary>Example output:</summary>
 
-```
-<details>
-<summary>Example output:</summary>
+    ```bash
+    Loading data from ./data/extracted/thwiki-20201120_no-list
 
-```bash
-Loading data from ./data/extracted/thwiki-20201120_no-list
+    Preprocess data.
+    Argument: rm_empty_parenthesis == True
 
-Preprocess data.
-Argument: rm_empty_parenthesis == True
+    100%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 140545/140545 [00:34<00:00, 4054.28it/s]
 
-100%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 140545/140545 [00:34<00:00, 4054.28it/s]
-
-Done.
-Time taken: 34.669601 secs.
+    Done.
+    Time taken: 34.669601 secs.
 
 
-Writing the result to ./data/wikitext_format/thwiki-20201120_no-list_rm-empty-parenthesis.txt
+    Writing the result to ./data/wikitext_format/thwiki-20201120_no-list_rm-empty-parenthesis.txt
 
-```
-</details>
+    ```
+    </details>
