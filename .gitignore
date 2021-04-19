@@ -1,3 +1,4 @@
+.DS_Store
 data/extracted/*/*
 data/wikitext_format/*.txt
 dumps/*.bz2
