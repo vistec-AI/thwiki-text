@@ -180,4 +180,4 @@ if __name__ == '__main__':
         for obj in thwiki_objs:
         
             joined_segments = '\n'.join(obj.segments)
-            writer.write(f"{joined_segments}\n\n\n")
+            writer.write(f"{joined_segments}\n")
