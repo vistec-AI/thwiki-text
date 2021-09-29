@@ -67,8 +67,8 @@ def remove_empty_parenthesis(segments):
         if ' (); ' in segments[i]:
             segments[i] = segments[i].replace(' (); ', ' ')
 
-        if '(, )' in segments[i]:
-            segments[i] = segments[i].replace('(, )', ' ')
+        if ' (, ) ' in segments[i]:
+            segments[i] = segments[i].replace(' (, ) ', ' ')
 
         if '(),' in segments[i]:
             segments[i] = segments[i].replace('(),', ',')
